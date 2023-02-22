@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:orientation="vertical"
+    android:background="@drawable/background1"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".dialogs.ChooseAccountDialog">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_width="32dp"
+            android:id="@+id/buttonBack"
+            android:layout_height="32dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/ic_baseline_arrow_back_ios_24" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="24dp"
+            android:text="Back"
+            android:textColor="@color/white"
+            android:fontFamily="@font/alata"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:fontFamily="@font/alata"
+            android:layout_marginTop="20dp"
+            android:text="I am a..."
+            android:textColor="#000000"
+
+            android:textSize="30sp"/>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/cardLearner"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="5dp"
+            android:elevation="10dp">
+            <FrameLayout
+                android:layout_width="260dp"
+                android:layout_height="230dp">
+                <ImageView
+                    android:id="@+id/imageViewStudent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/learner" />
+                <ImageView
+                    android:layout_width="32dp"
+                    android:layout_gravity="center|bottom"
+                    android:visibility="gone"
+                    android:layout_height="32dp"
+                    android:id="@+id/checkLearner"
+                    android:background="@drawable/ic_baseline_check_circle_24"
+                    android:backgroundTint="#388E3C" />
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="10dp"
+            android:id="@+id/cardTeacher"
+            >
+            <FrameLayout
+                android:layout_width="260dp"
+                android:layout_height="230dp"
+                android:padding="5dp"
+                >
+                <ImageView
+                    android:id="@+id/imageViewTeacher"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/teacher" />
+                <ImageView
+                    android:id="@+id/checkTeacher"
+                    android:layout_width="32dp"
+                    android:layout_gravity="center|bottom"
+                    android:layout_height="32dp"
+                    android:visibility="gone"
+                    android:background="@drawable/ic_baseline_check_circle_24"
+                    android:backgroundTint="#388E3C" />
+            </FrameLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <ImageView
+            android:id="@+id/imageViewNext"
+            android:layout_width="160dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/next" />
+    </LinearLayout>
+
+</LinearLayout>

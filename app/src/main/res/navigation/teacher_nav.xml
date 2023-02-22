@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/teacher_nav"
+    app:startDestination="@id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.danica.ikidsv2.teacherNav.HomeFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/nav_lessons"
+        android:name="com.danica.ikidsv2.teacherNav.LessonsFragment"
+        android:label="Lessons"
+        tools:layout="@layout/fragment_lessons" >
+        <action
+            android:id="@+id/action_nav_lessons_to_viewLessonFragment"
+            app:destination="@id/viewLessonFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.danica.ikidsv2.teacherNav.AccountFragment"
+        android:label="Account Settings"
+        tools:layout="@layout/fragment_account" >
+        <action
+            android:id="@+id/action_nav_settings_to_changePasswordFragment"
+            app:destination="@id/changePasswordFragment" />
+        <action
+            android:id="@+id/action_nav_settings_to_updateTeacherProfile"
+            app:destination="@id/updateTeacherProfile" />
+    </fragment>
+    <dialog
+        android:id="@+id/nav_logout"
+        android:name="com.danica.ikidsv2.teacherNav.LogoutDialog"
+        android:label="fragment_logout_dialog"
+        tools:layout="@layout/fragment_logout_dialog" />
+    <fragment
+        android:id="@+id/viewLessonFragment"
+        android:name="com.danica.ikidsv2.teacherNav.ViewLessonFragment"
+        android:label="View Lessons"
+        tools:layout="@layout/fragment_view_lesson" >
+        <argument
+            android:name="lessonID"
+            app:argType="string"
+            app:nullable="true"
+            android:defaultValue="null" />
+    </fragment>
+    <fragment
+        android:id="@+id/changePasswordFragment"
+        android:name="com.danica.ikidsv2.auth.ChangePasswordFragment"
+        android:label="Change Password"
+        tools:layout="@layout/fragment_change_password" />
+    <fragment
+        android:id="@+id/nav_classes"
+        android:name="com.danica.ikidsv2.teacherNav.classes.ClassesFragment"
+        android:label="My Classes"
+        tools:layout="@layout/fragment_classes" >
+        <action
+            android:id="@+id/action_nav_classes_to_addClass"
+            app:destination="@id/addClass" />
+    </fragment>
+    <fragment
+        android:id="@+id/addClass"
+        android:name="com.danica.ikidsv2.teacherNav.classes.AddClass"
+        android:label="Add Class"
+        tools:layout="@layout/fragment_add_class" />
+    <fragment
+        android:id="@+id/updateTeacherProfile"
+        android:name="com.danica.ikidsv2.dialogs.UpdateTeacherProfile"
+        android:label="Update Profile"
+        tools:layout="@layout/fragment_update_teacher_profile" >
+        <argument
+            android:name="user"
+            app:argType="com.danica.ikidsv2.models.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

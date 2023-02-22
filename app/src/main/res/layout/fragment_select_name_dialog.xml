@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background8"
+    tools:context=".dialogs.SelectNameDialog">
+
+    <ImageView
+        android:id="@+id/imageViewBack"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_margin="16dp"
+        app:srcCompat="@drawable/back" />
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="350dp"
+        android:layout_height="65dp"
+        android:layout_marginTop="196dp"
+        android:layout_marginEnd="32dp"
+        app:srcCompat="@drawable/label" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="32dp"
+        android:fontFamily="@font/didact_gothic"
+        android:text="@string/my_name_is"
+        android:textColor="#FFFFFF"
+        android:textSize="34sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp">
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/inputName"
+        app:errorEnabled="true"
+        app:startIconDrawable="@drawable/ic_baseline_edit_24"
+        app:startIconTint="#E64A19">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/edtName"
+            android:hint="@string/name"
+            android:inputType="textPersonName" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageView
+        android:id="@+id/button_next"
+        android:layout_width="160dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/next" />
+    </LinearLayout>
+</FrameLayout>
